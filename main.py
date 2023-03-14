@@ -15,10 +15,10 @@ if __name__ == '__main__':
     server_ip = "18.217.190.68"
     rsa_ppk = r"C:\Users\basha\Downloads\bush_bush.ppk"
     uname = 'ubuntu'
-
-    my_aws = Server(server_ip, rsa_ppk, uname)
+    upgrade = 'sudo apt update && sudo apt upgrade -y'
+    my_aws = Server(server_ip, rsa_ppk, uname, upgrade)
     # TODO - Call Ping method and print the results
     print(my_aws.ping())
     print("Updating server!")
-    ssh_result = my_aws
+    ssh_result = my_aws.upgrade
     print(ssh_result)
